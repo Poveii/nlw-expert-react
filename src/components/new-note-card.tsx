@@ -1,5 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
+import { toast } from 'sonner'
 import { X } from 'lucide-react'
 
 export function NewNoteCard() {
@@ -21,6 +22,8 @@ export function NewNoteCard() {
   function handleSaveNote(event: FormEvent) {
     event.preventDefault()
     console.log(content)
+
+    toast.success('Nota criada com sucesso')
   }
 
   return (
